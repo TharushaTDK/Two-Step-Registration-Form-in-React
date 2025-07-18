@@ -1,30 +1,12 @@
-# Two-Step Registration Form (React + Vite)
-This project is a responsive and user-friendly two-step registration form built using React.This project was developed for the Frontend Developer Assessment at ZDATA Innovation. It collects essential user details in two separate stages to enhance usability and reduce form abandonment.
+# React + Vite
 
-## Project Setup
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. Clone the repo:  
-   `git clone https://github.com/your-username/zdata-registration.git`  
-   `cd zdata-registration`
+Currently, two official plugins are available:
 
-2. Install dependencies:  
-   `npm install`
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-3. Create a `.env` file in the root with:  
-   `REACT_APP_API_BASE_URL=https://your-api-base.com`
+## Expanding the ESLint configuration
 
-## Running the App
-
-Start the development server:  
-`npm run dev`
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## Assumptions & Decisions
-
-- Used React Context API for managing form state globally.  
-- Client-side validation done before navigation or submission.  
-- Axios used for API calls with the base URL from `.env`.  
-- Tailwind CSS for styling, focusing on responsive and clean UI.  
-- Disabled navigation buttons until inputs are valid.  
-- API expects JSON payload and returns user info or error messages.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
