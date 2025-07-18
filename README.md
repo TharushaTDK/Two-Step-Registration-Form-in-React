@@ -1,2 +1,30 @@
-# Two-Step-Registration-Form-in-React
-This project is a responsive and user-friendly two-step registration form built using React for ZDATA Innovation. It collects essential user details in two separate stages to enhance usability and reduce form abandonment.
+# Two-Step Registration Form (React + Vite)
+This project is a responsive and user-friendly two-step registration form built using React.This project was developed for the Frontend Developer Assessment at ZDATA Innovation. It collects essential user details in two separate stages to enhance usability and reduce form abandonment.
+
+## Project Setup
+
+1. Clone the repo:  
+   `git clone https://github.com/your-username/zdata-registration.git`  
+   `cd zdata-registration`
+
+2. Install dependencies:  
+   `npm install`
+
+3. Create a `.env` file in the root with:  
+   `REACT_APP_API_BASE_URL=https://your-api-base.com`
+
+## Running the App
+
+Start the development server:  
+`npm run dev`
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Assumptions & Decisions
+
+- Used React Context API for managing form state globally.  
+- Client-side validation done before navigation or submission.  
+- Axios used for API calls with the base URL from `.env`.  
+- Tailwind CSS for styling, focusing on responsive and clean UI.  
+- Disabled navigation buttons until inputs are valid.  
+- API expects JSON payload and returns user info or error messages.
