@@ -1,12 +1,29 @@
-# React + Vite
+# Two-Step Registration Form (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Setup
 
-Currently, two official plugins are available:
+1. Clone the repo:  
+   `git clone https://github.com/your-username/zdata-registration.git`  
+   `cd zdata-registration`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Install dependencies:  
+   `npm install`
 
-## Expanding the ESLint configuration
+3. Create a `.env` file in the root with:  
+   `REACT_APP_API_BASE_URL=https://your-api-base.com`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running the App
+
+Start the development server:  
+`npm run dev`
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Assumptions & Decisions
+
+- Used React Context API for managing form state globally.  
+- Client-side validation done before navigation or submission.  
+- Axios used for API calls with the base URL from `.env`.  
+- Tailwind CSS for styling, focusing on responsive and clean UI.  
+- Disabled navigation buttons until inputs are valid.  
+- API expects JSON payload and returns user info or error messages.
