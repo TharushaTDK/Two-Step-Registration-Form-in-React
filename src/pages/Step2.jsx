@@ -33,7 +33,7 @@ export default function Step2() {
             setMessage('Registration successful!');
             setErrors({});
         } catch (err) {
-            setMessage('Something went wrong. Please try again.');
+            setMessage("Something went wrong. Backend isn't developed yet.");
             setErrors({});
         } finally {
             setLoading(false);
@@ -42,7 +42,7 @@ export default function Step2() {
 
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col">
-            {/* ✅ Progress Bar at Top */}
+            {/*  Progress Bar at Top */}
             <div className="w-full max-w-4xl mx-auto pt-6 px-4">
                 <div className="w-full bg-gray-200 h-3 rounded-full">
                     <div
@@ -52,7 +52,7 @@ export default function Step2() {
                 </div>
             </div>
 
-            {/* ✅ Centered Form Container */}
+            {/*  Centered Form Container */}
             <div className="flex flex-1 items-center justify-center px-4">
                 <div className="flex w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
                     {/* Left Panel */}
