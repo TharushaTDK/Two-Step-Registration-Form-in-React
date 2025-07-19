@@ -9,8 +9,6 @@
 2. Install dependencies:  
    `npm install`
 
-3. Create a `.env` file in the root with:  
-   `REACT_APP_API_BASE_URL=https://your-api-base.com`
 
 ## Running the App
 
