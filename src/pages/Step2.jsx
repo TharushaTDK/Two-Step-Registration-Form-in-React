@@ -54,9 +54,9 @@ export default function Step2() {
 
             {/*  Centered Form Container */}
             <div className="flex flex-1 items-center justify-center px-4">
-                <div className="flex w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
                     {/* Left Panel */}
-                    <div className="w-1/2 bg-gradient-to-b from-blue-900 to-gray-800 text-white p-10 hidden md:block">
+                    <div className="w-full md:w-1/2 bg-gradient-to-b from-blue-900 to-gray-800 text-white p-10">
                         <h2 className="text-2xl font-bold mb-4">One Last Step</h2>
                         <p className="mb-8">
                             Finish setting up your account by entering your password.

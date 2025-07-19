@@ -7,7 +7,6 @@ export default function Step1() {
     const { formData, setFormData, setStep } = useForm();
     const [errors, setErrors] = useState({});
     const [isValid, setIsValid] = useState(false);
-    const [touched, setTouched] = useState({});
 
     useEffect(() => {
         const validationErrors = validateStep1(formData);
@@ -16,11 +15,6 @@ export default function Step1() {
     }, [formData]);
 
     const handleNext = () => {
-        setTouched({
-            fullName: true,
-            email: true,
-            phone: true
-        });
 
         if (isValid) setStep(2);
 
@@ -40,11 +34,10 @@ export default function Step1() {
             </div>
 
             <div className="flex flex-1 items-center justify-center px-4">
-                <div className="flex w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
 
-
-                    {/* Left Panel */}
-                    <div className="w-1/2 bg-gradient-to-b from-blue-900 to-gray-800 text-white p-10 hidden md:block">
+                    {/* Left Panel – now visible on all screens */}
+                    <div className="w-full md:w-1/2 bg-gradient-to-b from-blue-900 to-gray-800 text-white p-10">
                         <h2 className="text-2xl font-bold mb-4">Create Your Account</h2>
                         <p className="mb-8">
                             Welcome to our registration page! Get started by creating your account.
@@ -56,7 +49,7 @@ export default function Step1() {
                         </p>
                     </div>
 
-                    {/* Right Panel */}
+                    {/* Right Panel – form section */}
                     <div className="w-full md:w-1/2 p-8">
                         <h2 className="text-2xl font-bold mb-6 text-gray-800">Register Now</h2>
                         <div className="space-y-4">
@@ -65,21 +58,21 @@ export default function Step1() {
                                 name="fullName"
                                 value={formData.fullName}
                                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                                error={touched.fullName && errors.fullName}
+                                error={errors.fullName}
                             />
                             <TextInput
                                 label="Email Id"
                                 name="email"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                error={touched.email && errors.email}
+                                error={errors.email}
                             />
                             <TextInput
                                 label="Phone(Optional)"
                                 name="phone"
                                 value={formData.phone}
                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                error={touched.phone && errors.phone}
+                                error={errors.phone}
                             />
                         </div>
 
@@ -96,7 +89,9 @@ export default function Step1() {
                             </button>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     );
